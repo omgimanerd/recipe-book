@@ -1,0 +1,100 @@
+\documentclass{book}
+
+\usepackage{amsmath}
+\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{tcolorbox}
+\tcbuselibrary{raster}
+
+% Preamble
+\geometry{
+  a4paper,
+  top=20mm,
+  left=10mm,
+  right=10mm
+}
+
+\NewTotalTCBox{\ingredients}{m}{
+  colback=red!20!white,
+  colframe=red!50!black,
+  title={Ingredients}
+}{
+  \begin{itemize}[leftmargin=4mm, nolistsep]
+    #1
+  \end{itemize}
+}
+
+\NewTotalTCBox{\steps}{m}{
+  colback=blue!5!white,
+  colframe=green!25!black,
+  title={Steps}
+}{
+  \begin{enumerate}[leftmargin=4mm]
+    #1
+  \end{enumerate}
+}
+
+% Recipe Book
+\title{Recipe Book}
+\date{}
+\author{Alvin Lin (omgimanerd)}
+
+\begin{document}
+
+\pagenumbering{gobble} % No page numbering
+
+\part*{Asian}
+
+% Creamy Silken Mapo Tofu
+\section*{Creamy Silken Mapo Tofu}
+\begin{tcbraster}[raster columns=2, raster equal height]
+  \ingredients{
+    \item $\tfrac{1}{2}$ pound ground pork \\
+    \item 4 cloves garlic, minced \\
+    \item 1 tbsp ginger, minced \\
+    \item 1 tbsp fermented black beans \\
+    \item 2 tbsp doubanjiang \\
+    \item 1.5 cups chicken stock \\
+    \item 2 pounds (generally 2 boxes) silken tofu \\
+    \item 1 tbsp cornstach in cold water (slurry) \\
+    \item 1 tsp sugar \\
+    \item sesame oil to taste \\
+    \item 2 century eggs, peeled and quartered \\
+    \item sliced green onions \\
+    \item red and green Sichuan peppercorns
+  }
+  \steps{
+    \item In a wok, heat frying oil and brown the ground pork.
+    \item Add the garlic, ginger, and fermented black beans when the pork is
+          fully cooked. Fry for 30 seconds.
+    \item Add the doubanjiang and cook for 30 seconds.
+    \item Add the chicken stock and simmer for 2 minutes.
+    \item Add the tofu and simmer for 2 minutes, breaking it up into bite sized
+          pieces.
+    \item Thicken the sauce with cornstarch slurry, pouring it in a third at a
+          time, 10 seconds apart.
+    \item Add the sugar and the sesame oil, mix and transfer out to a serving
+          bowl.
+    \item Toast the peppercorns in a dry frying pan and crush them into a
+          powder. Top with the peppercorn powder, green onions, and century
+          eggs.
+  }
+\end{tcbraster}
+\clearpage
+
+% Chili Oil
+\section*{Chili Oil}
+
+\subsection*{Simple}
+\subsection*{Excellent}
+\clearpage
+
+
+% Butter Chicken
+\section*{Butter Chicken}
+\clearpage
+
+\end{document}
