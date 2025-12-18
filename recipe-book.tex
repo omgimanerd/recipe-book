@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{blindtext}
 \usepackage{enumitem}
+\usepackage{gensymb}
 \usepackage{geometry}
 \usepackage{multicol}
 \usepackage{setspace}
@@ -12,17 +13,19 @@
 % Preamble
 \geometry{
   a4paper,
-  top=20mm,
   left=10mm,
-  right=10mm
+  top=20mm,
+  right=10mm,
+  bottom=5mm
 }
+
 
 \NewTotalTCBox{\ingredients}{m}{
   colback=red!20!white,
   colframe=red!50!black,
   title={Ingredients}
 }{
-  \begin{itemize}[leftmargin=4mm, nolistsep]
+  \begin{itemize}[leftmargin=4mm, itemsep=1.5mm]
     #1
   \end{itemize}
 }
@@ -32,7 +35,7 @@
   colframe=green!25!black,
   title={Steps}
 }{
-  \begin{enumerate}[leftmargin=4mm]
+  \begin{enumerate}[leftmargin=4mm, itemsep=1.5mm]
     #1
   \end{enumerate}
 }
@@ -41,46 +44,43 @@
 \title{Recipe Book}
 \date{}
 \author{Alvin Lin (omgimanerd)}
-
 \begin{document}
-
 \pagenumbering{gobble} % No page numbering
 
-\part*{Asian}
+\part*{East Asian}
 
 % Creamy Silken Mapo Tofu
 \section*{Creamy Silken Mapo Tofu}
 \begin{tcbraster}[raster columns=2, raster equal height]
   \ingredients{
-    \item $\tfrac{1}{2}$ pound ground pork \\
-    \item 4 cloves garlic, minced \\
-    \item 1 tbsp ginger, minced \\
-    \item 1 tbsp fermented black beans \\
-    \item 2 tbsp doubanjiang \\
-    \item 1.5 cups chicken stock \\
-    \item 2 pounds (generally 2 boxes) silken tofu \\
-    \item 1 tbsp cornstach in cold water (slurry) \\
-    \item 1 tsp sugar \\
-    \item sesame oil to taste \\
-    \item 2 century eggs, peeled and quartered \\
-    \item sliced green onions \\
-    \item red and green Sichuan peppercorns
+    \item $\tfrac{1}{2}$ pound ground pork
+    \item 4 cloves garlic, minced
+    \item 1 tbsp ginger, minced
+    \item 1 tbsp fermented black beans
+    \item 2 tbsp doubanjiang
+    \item 1.5 cups chicken stock
+    \item 2 pounds (generally 2 boxes) silken tofu
+    \item 1 tbsp cornstach in cold water (slurry)
+    \item 1 tsp each sugar and chicken broth powder
+    \item 1 tsp sesame oil
+    \item 2 century eggs, peeled and quartered
+    \item sliced green onions
+    \item red and green Sichuan peppercorns, toasted and crushed
   }
   \steps{
-    \item In a wok, heat frying oil and brown the ground pork.
+    \item In a wok, heat oil and brown the ground pork, breaking it apart as it
+          cooks.
     \item Add the garlic, ginger, and fermented black beans when the pork is
           fully cooked. Fry for 30 seconds.
     \item Add the doubanjiang and cook for 30 seconds.
     \item Add the chicken stock and simmer for 2 minutes.
     \item Add the tofu and simmer for 2 minutes, breaking it up into bite sized
           pieces.
-    \item Thicken the sauce with cornstarch slurry, pouring it in a third at a
-          time, 10 seconds apart.
-    \item Add the sugar and the sesame oil, mix and transfer out to a serving
-          bowl.
-    \item Toast the peppercorns in a dry frying pan and crush them into a
-          powder. Top with the peppercorn powder, green onions, and century
-          eggs.
+    \item Thicken with cornstarch slurry, pouring it in a third at a time until
+          the sauce coats and sticks to the tofu.
+    \item Add the sugar, chicken broth powder, and the sesame oil. Mix and
+          transfer out to a serving bowl.
+    \item Top with the peppercorn powder, green onions, and century eggs.
   }
 \end{tcbraster}
 \clearpage
@@ -89,9 +89,123 @@
 \section*{Chili Oil}
 
 \subsection*{Simple}
-\subsection*{Excellent}
+\begin{tcbraster}[raster columns=2, raster equal height]
+  \ingredients{
+    \item 2 cups dried chilies, deseeded
+    \item 1 cup red and green Sichuan peppercorns
+    \item 6 cups canola oil
+    \item[] \vspace{2mm}\textbf{Aromatics}
+    \item 2 shallots, sliced
+    \item 3 cloves garlic, smashed
+    \item 1 knob of ginger, smashed
+    \item 1 cinnamon stick
+    \item 1 star anise
+    \item 2 bay leaves
+  }
+  \steps{
+    \item Heat the oil with the aromatics. Keep it at 200\degree{F}
+          (110\degree{C}) for 30 minutes.
+    \begin{tcolorbox}[colframe=red!90!yellow, colback=red!25!white]
+      You should see small bubbles from the aromatics. Remove them if they start to burn.
+    \end{tcolorbox}
+    \item Crush the chilies in a spice grinder and place in a heatproof bowl.
+    \item Toast the peppercorns until aromatic and add them to the bowl.
+    \item Bring the oil to 325\degree{F} (180\degree{C}) and pour it over the
+          ground chili flakes while stirring.
+    \item The resulting oil can be jarred and stored after it cools.
+  }
+\end{tcbraster}
+
+\subsection*{Wang Gang Version}
+\begin{tcbraster}[raster columns=2, raster equal height]
+  \ingredients{
+    \item 1 pound dried lantern chilies
+    \item 1 pound dried bird's eye chilies
+    \item $\tfrac{1}{2}$ cup pumpkin seeds
+    \item $\tfrac{1}{2}$ cup soybeans, raw
+    \item 16 cups canola oil
+    \item 1 cup red and green Sichuan peppercorns
+    \item 2 tsbp baijiu or shaoxing wine
+    \item 1 pound ginger, smashed
+    \item 12 green onions, smashed
+    \item 2 cinnamon sticks
+    \item 4 star anise
+    \item 4 pieces dried sand ginger
+    \item 2 tsp white vinegar
+    \item 1 cup white sesame seeds, untoasted
+  }
+  \steps{
+    \item Separate out the seeds of the chilies.
+    \item Toast the pumpkin seeds, soybeans, and chili seeds in a hot wok
+          without oil.
+    \item When the seeds start to smell fragrant, transfer to a mortar and
+          pestle and crush into a powder.
+    \item Roast the chilies next in the wok until they are completely dry.
+          Remove and let cool.
+    \item Heat a half cup of oil in the wok and fry the peppercorns and roasted
+          chilies slowly over low heat until the skins are crispy.
+    \item Remove the chilies and crush them to a powder, add the baijiu or
+          shaoxing wine, just enough to lightly moisten it to prevent burning
+          later.
+    \item Heat the rest of the oil to 325\degree{F} (180\degree{C}) and add the
+          ginger, cinnamon sticks, star anise, sand ginger, and green onions.
+          Fry slowly for 30 minutes, removing the aromatics when they turn
+          brown.
+    \item Mix the crushed chilies, seed powder, and white vinegar in a large
+          heatproof bowl.
+    \item Add the oil one ladleful at a time to the mix to bloom the spices,
+          stirring frequently.
+    \item When all the oil has been added, pour in the sesame seeds and continue
+          stirring.
+  }
+\end{tcbraster}
+\begin{center}
+  For a versatile dipping sauce, mix crushed garlic, chopped green onion, and
+  chili oil.
+\end{center}
 \clearpage
 
+% Spicy Red Oil Chicken Salad
+\section*{Spicy Red Oil Chicken Salad}
+\begin{tcbraster}[raster columns=2, raster equal height]
+  \ingredients{
+    \item chicken, whole or 2 quarters (dark meat)
+    \item 1 knob ginger, sliced
+    \item 2 green onions, smashed + 1 green onion, finely sliced
+    \item 2 star anise
+    \item 2 tbsp green Sichuan peppercorn
+    \item 2 cucumbers
+    \item 8--10 large cloves of garlic
+    \item 3 tbsp sesame oil
+    \item 1 cup chili oil (see recipe above)
+    \item 1 tsp each salt, sugar, MSG, chicken broth powder
+    \item 1 tsbp Chinese black vinegar
+    \item 1 tsp soy sauce
+    \item 1 tbsp sesame paste
+    \item toasted Sichuan peppercorn powder
+  }
+  \steps{
+    \item In a large pot, cover the chicken, ginger, smashed green onions, and
+          star anise with cold water and bring to a boil. Once it comes to a
+          boil, lower the heat to a simmer. Skim off the blood foam that floats
+          to the surface.
+    \item Remove the chicken when cooked (internal temperature 160\degree{F}
+          (70\degree{C})) and place in a bath of ice water.
+    \item Scrape the skin of the cucumber with a knife, removing about half the
+          skin. Smash it with the flat of a cleaver and slice into chunks. Lay
+          at the bottom of a serving bowl.
+    \item Pound the garlic in a mortar and pestle with a tsp of salt. Mix it
+          with the sesame oil into a smooth paste.
+    \item Shred and debone the chicken, spreading it in an even layer over the
+          smashed cucumbers.
+    \item Mix the chili oil with the salt, sugar, MSG, and chicken broth powder,
+          black vinegar, soy sauce, and sesame paste.
+    \item Mix the chili oil, garlic paste, and sliced scallions and pour it over
+          the chicken and cucumbers. Top with peppercorn powder to taste.
+  }
+\end{tcbraster}
+
+\part*{Indian}
 
 % Butter Chicken
 \section*{Butter Chicken}
